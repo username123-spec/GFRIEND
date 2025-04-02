@@ -6,7 +6,7 @@ This is the official implementation of GFRIEND: Generative Few-shot Reward Infer
 3. **M-DPO**: Weighted Direct Preference Optimization training on the above multi-level preference data.
 
 <div align=center>
-<img src="https://github.com/username123-spec/GFRIEND/fig/fig7.png" width="180" height="105">
+<img src="https://github.com/username123-spec/GFRIEND/tree/master/fig/fig7.png" width="180" height="105">
 </div>
 
 
