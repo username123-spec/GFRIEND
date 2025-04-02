@@ -5,7 +5,7 @@ This project is the code of the paper [GFRIEND: Generative Few-shot Reward Infer
 2. **Preference Refinement**: Sampling multiple times on data with preference labels to generate diverse CoT (chain-of-thought) and judgment results, and expanding and fine-grainedly distinguishing preference data based on perplexity scoring.
 3. **M-DPO**: Weighted Direct Preference Optimization training on the above multi-level preference data.
 
-![The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question. ](.\fig\fig1.png)  
+![The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question. ](./fig/fig1.png)  
 
 ## Dataset
 
@@ -24,16 +24,16 @@ When reproducing or conducting research using the above datasets, please note th
 
 ### Main Results
 
-![1](.\fig\fig2.png) 
+![1](./fig/fig2.png) 
 
 *Table 1:Accuracy of models’ judges on the test sets of Ultra-Feedback, PKU-SafeRLHF, and Reward-Bench. BT-model, ArmoRM and GFRIEND are trained on 3000 samples of Skywork-Reward-Preference-80K-v0.2 based
 on Llama3-8B-Instruct.*
 
-![2](.\fig\fig3.png) 
+![2](./fig/fig3.png) 
 
 *Table 2: Evaluation of different language model bases using supervised fine-tuning (SFT), BTmodel, and the GFRIEND method on the three benchmarks: UltraFeedback, PKU-SafeRLHF and Reward-Bench. With the exception of SFT, the data used to train the model were all 3000 samples.*
 
-![3](.\fig\fig6.png) 
+![3](./fig/fig6.png) 
 
 *Table 3(Left): Judgment accuracy of GFRIEND and other models on specific medical datasets. BT-model, Ar￾moRM and GFRIEND are trained on 3000 samples based on Llama3-8B-Instruct.*
 
