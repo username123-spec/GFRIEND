@@ -1,11 +1,14 @@
-# GFRIEND
+# GFRIEND: Generative Few-shot Reward Inference through Efficient DPO
 
-This project is the code of the paper [GFRIEND: Generative Few-shot Reward Inference through Efficient DPO]. The core process includes:
+This is the official implementation of GFRIEND: Generative Few-shot Reward Inference through Efficient DPO. The core process includes:
 1. **SFT**: Supervised fine-tuning of the base model using a small amount of (question, chain-of-thought) data to enable it to generate high-quality thoughts/reasoning.
 2. **Preference Refinement**: Sampling multiple times on data with preference labels to generate diverse CoT (chain-of-thought) and judgment results, and expanding and fine-grainedly distinguishing preference data based on perplexity scoring.
 3. **M-DPO**: Weighted Direct Preference Optimization training on the above multi-level preference data.
 
-![The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question. ](./fig/fig7.png)  
+![The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question. ](./fig/fig8.png)  
+
+*Figure 1: The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question.*
+
 
 ## Dataset
 
@@ -13,7 +16,7 @@ The project primarily utilizes the following two types of datasets for training 
 
 1. **General Domain Dataset**: We selected the publicly available ["Skywork-Reward-Preference-80K-v0.2"]("Skywork-Reward-Preference-80K-v0.2") as the base preference data. For few-shot scenarios, we used a small number of high-quality samples (approximately 3,000) for experimentation and tested on public benchmarks such as UltraFeedback, PKU-SafeRLHF, and Reward-Bench.
 
-2. **Domain-Specific Dataset**: To verify the effectiveness of the method in specialized scenarios, the paper also constructed a medical preference dataset simulating a low-resource environment. The dataset consists of 3,500 entries, with 3,000 used for training and 500 for validation. The data is derived from anonymized segments of real clinical conversations and publicly available medical data. It has undergone deduplication, normalization, anonymization, and expert annotation to form a structured preference format of (question, answer_pos, answer_neg).
+2. **Medical Domain Dataset**: To verify the effectiveness of the method in specialized scenarios, the paper also constructed a medical preference dataset simulating a low-resource environment. The dataset consists of 3,500 entries, with 3,000 used for training and 500 for validation. The data is derived from anonymized segments of real clinical conversations and publicly available medical data. It has undergone deduplication, normalization, anonymization, and expert annotation to form a structured preference format of (question, answer_pos, answer_neg).
 
 When reproducing or conducting research using the above datasets, please note the following points:
 
@@ -35,7 +38,7 @@ on Llama3-8B-Instruct.*
 
 ![3](./fig/fig6.png) 
 
-*Table 3(Left): Judgment accuracy of GFRIEND and other models on specific medical datasets. BT-model, Ar￾moRM and GFRIEND are trained on 3000 samples based on Llama3-8B-Instruct.*
+*Table 3(Left): Judgment accuracy of GFRIEND and other models on specific medical datasets. BT-model, ArmoRM and GFRIEND are trained on 3000 samples based on Llama3-8B-Instruct.*
 
 *Table 4(Right): Judgment accuracy of GFRIEND and its variants. CoT-S indicates whether or not to use Preference Refinement. With the exception of SFT, the models are all trained on 3000 samples based on Llama3-8B-Instruct.*
 
