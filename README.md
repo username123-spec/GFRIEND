@@ -9,6 +9,8 @@ This is the official implementation of GFRIEND: Generative Few-shot Reward Infer
 <img src="https://github.com/username123-spec/GFRIEND/tree/master/fig/fig7.png">
 </div>
 
+<img src="https://github.com/username123-spec/GFRIEND/tree/master/fig/fig7.png" width="180" height="105">
+
 
 *Figure 1: The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question.*
 
