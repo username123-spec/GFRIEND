@@ -5,7 +5,7 @@ This is the official implementation of GFRIEND: Generative Few-shot Reward Infer
 2. **Preference Refinement**: Sampling multiple times on data with preference labels to generate diverse CoT (chain-of-thought) and judgment results, and expanding and fine-grainedly distinguishing preference data based on perplexity scoring.
 3. **M-DPO**: Weighted Direct Preference Optimization training on the above multi-level preference data.
 
-![The steps for preference datas](./fig/fig7.png){:height="70%" width="70%"}  
+![The steps for preference datas](./fig/fig9.png)
 
 *Figure 1: The steps for Generating more preference datas with a preference dataset that includes preference labels for a pair of answers to a question.*
 
