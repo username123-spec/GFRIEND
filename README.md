@@ -15,7 +15,12 @@ This is the official implementation of GFRIEND: Generative Few-shot Reward Infer
 
 The project primarily utilizes the following two types of datasets for training and evaluation as described in the paper:
 
-1. **General Domain Dataset**: We selected the publicly available ["Skywork-Reward-Preference-80K-v0.2"]("Skywork-Reward-Preference-80K-v0.2") as the base preference data. For few-shot scenarios, we used a small number of high-quality samples (approximately 3,000) for experimentation and tested on public benchmarks such as UltraFeedback, PKU-SafeRLHF, and Reward-Bench.
+1. **General Domain Dataset**: We selected the publicly available ["Skywork-Reward-Preference-80K-v0.2"]("Skywork-Reward-Preference-80K-v0.2") as the base preference data. For few-shot scenarios, we used a small number of high-quality samples (approximately 3,000) for experimentation and tested on public benchmarks such as
+
+- [Reward Bench](https://huggingface.co/spaces/allenai/reward-bench)
+- [[UltraFeedback](https://github.com/OpenBMB/UltraFeedback)]
+- [PKU-SafeRLHF](https://github.com/PKU-Alignment/safe-rlhf))
+
 
 2. **Medical Domain Dataset**: To verify the effectiveness of the method in specialized scenarios, the paper also constructed a medical preference dataset simulating a low-resource environment. The dataset consists of 3,500 entries, with 3,000 used for training and 500 for validation. The data is derived from anonymized segments of real clinical conversations and publicly available medical data. It has undergone deduplication, normalization, anonymization, and expert annotation to form a structured preference format of (question, answer_pos, answer_neg).
 
